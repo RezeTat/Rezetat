@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    position: relative;
+    height: 100%;
+    min-width: 940px;
+    min-height: 100%;
+    width: 100%;
+}
+
+.section {
+    min-height: 650px;
+  
+    &_centered {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .btn{
+    border-radius: 5px;
+    padding: 11px 12px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: Ubuntu;
+    color:#ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}

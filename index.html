@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
 
 </head>
 <body>
     <div class="wrapper">
-        <div class="main__content">
-        <section class="main">
+        <main class="main-contant">
+        <section class="main-section">
         <header class="header">
             <div class="container">
                 <div class="header__sidebar">
@@ -47,7 +46,7 @@
                     </nav>
                 </aside>
                 <div class="button">
-                        <button class="reserve">заказать</button>
+                        <button class="btn btn__reserve">заказать</button>
                     </div>
                 </div>
             </div>
@@ -60,48 +59,104 @@
                         <img class="drops" src="./images//drops.png">
                     </div>
                     <div class="img__made">
-                        <img class="made" src="./images/made.png">
+                        <h3 class="made">Мы делаем</h3>
+                        <h4 class="made__two">натуральные бургеры</h4>
                     </div>
                 </div>
-                <div class="right__menus">
-                    <ul class="right__menu">
-                        <li class="right__item active">
-                            <a href="#" class="right__link"></a>
+                <div class="navigations">
+                    <ul class="navigation">
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link navigation__link_active"></a>
                         </li>
-                            <li class="right__item">
-                                <a href="#" class="right__link"></a>
+                            <li class="navigation__item">
+                                <a href="#" class="navigation__link"></a>
                             </li>
-                                <li class="right__item">
-                                    <a href="#" class="right__link"></a>
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link"></a>
                                 </li>
-                                    <li class="right__item">
-                                        <a href="#" class="right__link"></a>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link"></a>
                                     </li>
-                                        <li class="right__item">
-                                            <a href="#" class="right__link"></a>
+                                        <li class="navigation__item">
+                                            <a href="#" class="navigation__link"></a>
                                         </li>
-                                            <li class="right__item">
-                                                <a href="#" class="right__link"></a>
+                                            <li class="navigation__item">
+                                                <a href="#" class="navigation__link"></a>
                                             </li>
-                                                <li class="right__item">
-                                                    <a href="#" class="right__link"></a>
+                                                <li class="navigation__item">
+                                                    <a href="#" class="navigation__link"></a>
                                                 </li>
-                                                    <li class="right__item">
-                                                        <a href="#" class="right__link"></a>
+                                                    <li class="navigation__item">
+                                                        <a href="#" class="navigation__link"></a>
                                                     </li>
-                                                        <li class="right__item">
-                                                            <a href="#" class="right__link"></a>
+                                                        <li class="navigation__item">
+                                                            <a href="#" class="navigation__link"></a>
                                                         </li>
                     </ul>
                 </div>
                 </div>
-                <div class="scroll">
+                <a href="#" class="scroll">
                     <img class="img__scroll" src="./images/arrow-scroll.png" alt="">
-                </div>
+                </a>
             </div>
 
-    </section>
-</div> 
+        </section>
+        <section class="section__best">
+            <div class="container">
+                <h3 class="head__best">мы лучшие</h3>
+                    <ul class="best__menu">
+                        <li class="best__item">
+                            <img class="img__best" src="./images/meat.png" alt="картинка">
+                            <h5 class="text__best">100% свежее мясо</h5>
+                            <p class="desc__best">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                            </p>
+                        </li>
+                        <li class="best__item">
+                                <img class="img__best" src="./images/hand.png" alt="картинка">
+                                <h5 class="text__best">Ручная  сборка</h5>
+                                <p class="desc__best">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                </p>
+                            </li>
+                            <li class="best__item">
+                                    <img class="img__best" src="./images/natural.png" alt="картинка">
+                                    <h5 class="text__best">Натуральные ингредиенты</h5>
+                                    <p class="desc__best">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                    </p>
+                                </li>
+                    </ul>
+            </div>
+        </section>
+        <section class="section comments">
+            <div class="container container_foto">
+                <ul class="comments__list">
+                    <li class="comments__item " style="background-image: url('./images/photo-21.jpg')">
+                    </li>
+                        <li class="comments__item" style="background-image: url('./images/photo-22.jpg')">
+                            <div class="comments__hover">
+                                <h3 class="name__comments">Константин Спилберг</h3>
+                                <p class="desc__comments">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                                </p>
+                                <button class="btn btn__send">Отправить</button>
+                            </div>
+                        </li>
+                            <li class="comments__item" style="background-image: url('./images/photo-23.jpg')">
+                            </li>
+                                <li class="comments__item" style="background-image: url('./images/photo-24.jpg')">
+                                </li>
+                                    <li class="comments__item" style="background-image: url('./images/photo-25.jpg')">
+                                    </li>
+                                    <li class="comments__item" style="background-image: url('./images/photo-26.jpg')">
+                                        </li>
+                                            <li class="comments__item" style="background-image: url('./images/photo-27.jpg')">
+                                            </li>
+                                                <li class="comments__item" style="background-image: url('./images/photo-28.jpg')">
+                                                </li>
+
+                </ul>
+            </div>
+        </section>
+
+        </main> 
 </div>
 </body>
 </html>

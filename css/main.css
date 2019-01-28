@@ -1,3 +1,16 @@
+@import url(./normalize.css);
+@font-face {
+  font-family: 'gagalin';
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'lifehack';
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -25,17 +38,45 @@ a {
   color: #fff; }
 
 .container {
-  width: 960px;
+  width: 940px;
   margin: 0 auto; }
 
 .wrapper {
   position: relative;
+  height: 100%;
+  min-width: 940px;
+  min-height: 100%;
+  width: 100%; }
+
+.section {
+  min-height: 650px; }
+  .section_centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+.btn {
+  border-radius: 5px;
+  padding: 11px 12px;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-family: Ubuntu;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500; }
+
+.main-contant {
   height: 100%; }
 
-.main__content {
-  height: 100%; }
-
-.main {
+.main-section {
   background-size: cover;
   position: relative;
   top: 0;
@@ -43,7 +84,7 @@ a {
   width: 100%;
   height: 100%;
   min-width: initial;
-  background: url(../images/video-bg.png) center center/cover no-repeat;
+  background: url(../../images/video-bg.png) center center/cover no-repeat;
   color: #fff; }
 
 .header {
@@ -53,7 +94,7 @@ a {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 7px 80px 1px 80px;
+  padding: 7px 0;
   color: #fff;
   font-family: Ubuntu;
   font-size: 12px;
@@ -75,8 +116,7 @@ a {
   vertical-align: top;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  margin-left: 45px; }
+  align-items: center; }
 
 .menu {
   display: -webkit-box;
@@ -103,12 +143,8 @@ a {
   .menu__item:first-child::before {
     content: none; }
 
-.reserve {
+.btn__reserve {
   background: #e45028;
-  border-radius: 5px;
-  padding: 11px 13px;
-  color: #fff;
-  border: none;
   margin-right: 70px; }
 
 .page {
@@ -120,13 +156,21 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 93%; }
+  width: 100%; }
 
 .made {
-  margin-left: 15px; }
+  font-family: gagalin;
+  color: #f9b43b;
+  font-size: 72px; }
+
+.made__two {
+  font-family: lifehack;
+  color: #ffffff;
+  font-size: 65px;
+  line-height: 65px; }
 
 .img__made {
-  margin-top: 125px; }
+  margin-top: 110px; }
 
 .img__burger {
   position: relative;
@@ -146,26 +190,32 @@ a {
   padding-bottom: 60px;
   padding-right: 13px; }
 
-.right__menus {
-  width: 7%; }
+.navigations {
+  position: fixed;
+  right: 43px;
+  top: 13%; }
 
-.right__item {
-  content: '';
+.navigation__link {
   position: relative;
   display: block;
-  width: 6px;
-  height: 6px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin-bottom: 16px; }
-
-.right__item:active .right__link {
-  position: relative;
-  display: block;
+  margin: 3px;
   width: 16px;
   height: 16px;
   border-radius: 50%; }
-  .right__item:active .right__link:after {
+  .navigation__link:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .navigation__link_active:after {
     position: absolute;
     content: '';
     display: block;
@@ -179,31 +229,114 @@ a {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-  .right__item:active .right__link:before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    background-color: #fff;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
 
 .scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 40px; }
+
+.section__best {
+  background-size: cover;
   position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: initial;
+  background: url(../../images/bg.png) center center/cover no-repeat;
+  color: #fff; }
+
+.head__best {
+  font-family: Gagalin;
+  color: #2f3234;
+  font-size: 71.73px;
+  text-align: center;
+  padding-top: 105px; }
+
+.best__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  margin-top: 33px;
+  padding: 0 90px 0 90px; }
 
-.img__scroll {
-  margin-top: 70px; }
+.text__best {
+  font-family: Lifehack;
+  color: #2f3234;
+  font-size: 24px;
+  margin-top: 10px;
+  line-height: 28px; }
+
+.desc__best {
+  font-family: Ubuntu;
+  color: #2f3234;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: 10px; }
+
+.comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+  background: #000000;
+  position: relative; }
+
+.comments__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.comments__item {
+  width: 25%;
+  height: 50%;
+  background: center center / cover no-repeat;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+  .comments__item:hover .comments__hover {
+    opacity: 1; }
+
+.comments__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(80, 80, 80, 0.7);
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+  text-align: left;
+  padding: 50px 20px; }
+
+.btn__send {
+  background-color: #2f3234;
+  margin-top: 17px; }
+
+.name__comments {
+  font-family: Gagalin;
+  color: #ffffff;
+  font-size: 14px; }
+
+.desc__comments {
+  font-family: Ubuntu;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 30px; }

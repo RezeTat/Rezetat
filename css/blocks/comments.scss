@@ -1,0 +1,62 @@
+.comments{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    background: #000000;
+    position: relative;
+}    
+   
+.comments__list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comments__item{
+    width: 25%;
+    height: 50%;
+    background: center center / cover no-repeat;
+    position: relative;
+    filter: grayscale(100%);  
+    &:hover{
+        .comments__hover{
+            opacity: 1;
+        }
+    }
+}
+
+.comments__hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(#505050, .7);
+        opacity: 0;
+        transition: opacity .3s;
+        text-align: left;
+        padding: 50px 20px;
+}
+
+.btn__send{
+    background-color: #2f3234;
+    margin-top: 17px;
+}
+    
+.name__comments{
+    font-family: Gagalin;
+    color:#ffffff;
+    font-size: 14px;
+}
+
+.desc__comments{
+    font-family: Ubuntu;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 30px;
+}
