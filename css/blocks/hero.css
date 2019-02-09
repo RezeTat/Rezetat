@@ -1,13 +1,7 @@
-.main__contant {
+.main-contant {
   height: 100%; }
 
-.main__section {
-  background-size: cover;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.main-section {
   min-width: initial;
   background: url(../../images/video-bg.png) center center/cover no-repeat;
   color: #fff; }
@@ -16,14 +10,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 7px 80px 1px 80px;
   color: #fff;
   font-family: Ubuntu;
-  font-size: 12px;
-  text-transform: uppercase; }
+  font-size: rem(12px);
+  text-transform: uppercase;
+  padding: rem(13px);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .header__sidebar {
   display: -webkit-box;
@@ -36,106 +30,90 @@
   -ms-flex-align: center;
   align-items: center; }
 
-.sidebar__menu {
+.sidebar-list {
   display: inline-block;
   vertical-align: top;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 45px; }
+  margin-left: rem(45px); }
 
-.menu {
+.sidebar-list__menu {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  padding-right: 15px; }
+  display: flex; }
 
-.menu__item {
+.sidebar-list__menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 15px;
+  margin-left: rem(15px);
   color: #fff; }
-  .menu__item::before {
+  .sidebar-list__menu-item::before {
     content: " ";
     width: 3px;
     height: 3px;
     border-radius: 50%;
     background-color: #fff;
-    margin-right: 15px; }
-  .menu__item:first-child::before {
+    margin-right: rem(15px); }
+  .sidebar-list__menu-item:first-child::before {
     content: none; }
 
-.reserve {
+.btn__reserve {
   background: #e45028;
-  border-radius: 5px;
-  padding: 11px 13px;
-  color: #fff;
-  border: none;
-  margin-right: 70px; }
+  margin-left: rem(20px); }
 
 .page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.images {
+.page__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 93%; }
+  width: 100%; }
 
 .made {
   font-family: gagalin;
   color: #f9b43b;
-  font-size: 72px; }
+  font-size: rem(72px); }
 
 .made__two {
   font-family: lifehack;
   color: #ffffff;
-  font-size: 65px;
-  line-height: 65px; }
+  font-size: rem(65px);
+  line-height: rem(65px); }
 
 .img__made {
-  margin-top: 110px; }
+  margin-top: rem(40px); }
 
 .img__burger {
   position: relative;
-  margin-left: 40px;
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-  margin-top: -30px; }
-
-.drops {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding-bottom: 60px;
-  padding-right: 13px; }
+  margin-left: rem(20px);
+  margin-top: rem(-80px); }
 
 .navigations {
-  width: 7%; }
+  position: fixed;
+  right: rem(33px);
+  top: 13%; }
 
 .navigation__link {
   position: relative;
   display: block;
-  margin: 20px;
-  width: 16px;
-  height: 16px;
+  margin: rem(3px);
+  width: rem(16px);
+  height: rem(16px);
   border-radius: 50%; }
   .navigation__link:before {
     position: absolute;
     content: '';
     display: block;
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     background-color: #fff;
     border-radius: 50%;
     top: 50%;
@@ -147,8 +125,8 @@
     position: absolute;
     content: '';
     display: block;
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid #fff;
@@ -159,16 +137,5 @@
     transform: translate(-50%, -50%); }
 
 .scroll {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.img__scroll {
-  margin-top: 70px; }
+  left: 50%;
+  margin-bottom: rem(80px); }

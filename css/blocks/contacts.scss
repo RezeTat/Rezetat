@@ -1,0 +1,71 @@
+.section-contacts{
+    background: url(../../images/Layer.png) center center / cover no-repeat;
+}
+
+.contacts-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #080808;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(7px) rem(24px);
+    @include phones{
+        flex-direction: column;
+        text-align: center;
+        padding: rem(30px) rem(24px)
+    }
+}
+
+
+.contacts__adress{
+    font-family: Ubuntu;
+    color:#ffffff;
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+}
+
+.contacts__phone{
+    font-family: Ubuntu;
+    color:#e45028;
+    font-size: rem(14px);
+    font-weight: 700;
+    line-height: rem(24px);
+}
+
+.phone__svg{
+    width: rem(10px);
+    height: rem(10px);
+    position: relative;
+}
+
+.connect-list{
+    position: relative;
+    top: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.connect-list__item{
+    margin-right: rem(20px);
+}
+
+.connect__link{
+    display: inline-block;
+    max-width: rem(23px);
+    max-height: rem(20px);
+    opacity: .3;
+    transition: .3s;
+    &:hover {
+    opacity: 1;
+        }
+}
+
+.connect__link-icon{
+    width: rem(20px);
+    height: rem(20px);
+}
+

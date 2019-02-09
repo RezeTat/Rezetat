@@ -1,0 +1,143 @@
+.section-team{
+    background: url(../../images/SBS_1255-X2.jpg) center center / cover no-repeat;
+    color: #fff;
+    display: flex;
+    position: relative;
+
+}
+
+.сontainer__team {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background: rgba(#2f3234, .93);
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(95px);
+    padding-left: rem(85px);
+
+    @include tablets {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.team__title{
+    font-family: Gagalin;
+    color:    #f9b43b;
+    font-size: rem(72px);
+    font-weight: 400;
+    line-height: rem(64px);
+    padding-bottom: rem(30px);
+
+    @include tablets{
+        margin-top: rem(213px);
+        text-align: center;
+        margin-bottom: rem(40px);
+    }
+}
+
+.team-list__person{
+    font-family: Gagalin;
+    color:#ffffff;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(28px);
+    display: flex;
+    align-items: center;
+    @include tablets{
+        display: inline-flex;
+        font-size: rem(24px);
+        padding-top: rem(20px);
+    }
+
+        &:before {
+            content: "";
+            height: 0;
+            width: 0;
+            border: rem(5px) solid transparent;
+            border-top-color: #f9b43b;
+            border-bottom-width: rem(0px);
+        }
+}
+
+.team-list__icon{
+	text-align: center;
+    width: 30%;
+    
+    @include tablets{
+        width: auto;
+        padding: 0 rem(10px);
+    }
+}
+
+.team-list__img{
+    width: rem(100px);
+	height: rem(100px);
+	@include cover;
+    border-radius: 50%;
+}
+
+.team-list__item-active{
+    .team-list__person{
+        color: #f9b43b;
+
+            &:before {
+            transform: rotate(-180deg);
+          }
+    }
+}
+
+.team-list__item-active{
+    .team-list__content{
+        opacity: 1;
+        height: auto;
+    }
+}
+
+.team-list__content{
+    opacity: 0;
+    transition: opasity .4s;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.team-list__text{
+    font-family: Ubuntu;
+    color:#ffffff;
+    font-size: rem(14px);
+    font-weight: 700;
+    line-height: rem(24px);
+    padding: 0 rem(28px);
+    &-desc{
+        font-weight: 300;
+    }
+}
+
+
+.team-list{
+    @include tablets{
+        text-align: center;
+    }
+}
+
+.team-list__item{
+    margin-bottom: rem(24px);
+  
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.team-list__team-title{
+    font-weight: 700;
+}

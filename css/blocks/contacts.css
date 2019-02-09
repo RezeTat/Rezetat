@@ -1,0 +1,28 @@
+.section-contacts {
+  background: url(../../images/Layer.png) center center/cover no-repeat; }
+
+.contacts-footer {
+  background: #080808;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.contacts__adress {
+  font-family: Ubuntu;
+  color: #ffffff;
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(24px); }
+
+.contacts__phone {
+  font-family: Ubuntu;
+  color: #e45028;
+  font-size: rem(14px);
+  font-weight: 700;
+  line-height: rem(24px); }

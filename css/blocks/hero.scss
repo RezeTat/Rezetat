@@ -3,51 +3,53 @@
 }
 
 .main-section{
-    background-size: cover;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     min-width: initial;
     background: url(../../images/video-bg.png) center center / cover no-repeat;
-    color: #fff;
-    
+    color: #fff; 
 }
 
 // header
 
 .header{
     display: flex;
-    flex: 1;
-    padding: 7px 0;
     color: #fff;
     font-family: Ubuntu;
-    font-size: 12px;
+    font-size: rem(12px);
     text-transform: uppercase;
+    padding: rem(13px);
+    justify-content: space-between;
+    width: 100%;
 }
 
 .header__sidebar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
-.sidebar__menu {
+.sidebar{
+        @include tablets{
+            display: none;
+    }
+}
+
+.sidebar-list {
     display: inline-block;
     vertical-align: top;
     align-items: center;
+    margin-left: rem(45px);
 }
 
-.menu{
+.sidebar-list__menu{
     display: flex; 
-    padding-right: 15px;
+    white-space: nowrap;
 }
 
-.menu__item{
+.sidebar-list__menu-item{
     display: flex;
     align-items: center;
-    margin-left: 15px;
+    margin-left: rem(15px);
     color: #fff;
 
     &::before{
@@ -56,7 +58,7 @@
         height: 3px;
         border-radius: 50%;
         background-color: #fff;
-        margin-right: 15px;
+        margin-right: rem(15px);
     }
 
         &:first-child::before{
@@ -66,7 +68,18 @@
 
 .btn__reserve{
     background: #e45028;
-    margin-right: 70px;
+    margin-left: rem(20px);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+}
+  
+.sidebar-list {
+      flex: 1;
+      text-align: right;
+      margin-right: rem(20px);
 }
 
 // images
@@ -74,67 +87,110 @@
 display: flex;
 }
 
-.images{
+.page__content{
     display: flex;
     width: 100%;
+
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 12%;
+    }
+
+    @include phones {
+        margin-top: rem(28px);
+    }
 }
 
 .made{
     font-family: gagalin;
     color:#f9b43b;
-    font-size: 72px;
+    font-size: rem(72px);
+
+    @include phones {
+        margin-top: rem(65px);
+        font-size: rem(65px);
+
+    }
 }
 
 .made__two{
     font-family: lifehack;
     color:    #ffffff;
-    font-size: 65px;
-    line-height:65px;
+    font-size: rem(65px);
+    line-height: rem(65px);
+    @include phones{
+        font-size: rem(65px);
+    }
 }
 
 .img__made{
-    margin-top: 110px;
+    margin-top: rem(40px);
+    margin-right: rem(35px);
+
+    @include tablets{
+        width: auto;
+        align-items: center;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+
 }
 
 .img__burger{
     position: relative;
-    margin-left: 40px;
-    transform: scale(0.9);
-    margin-top: -30px;
+    margin-left: 0;
+    margin-top: rem(-80px);
+    width: 100%;
+
+    @include tablets{
+        width: auto;
+    }
+    @include phones{
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
-.drops{
-    position: absolute;
-    top: 50%;
+.burger{
+    display: inline-block;
+    position: relative;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 60px;
-    padding-right: 13px;
+    transform: translateX(-50%);
+    max-width: 100%;
+    max-height: 1000%;
+
 }
 
 // right__menus
 
 .navigations{
     position: fixed;
-    right: 43px;
+    right: rem(65px);
     top: 13%;
+
+    @include tablets{
+        display: none;
+    }
 }
 
 .navigation {
     &__link {
     position: relative;
     display: block;
-    margin: 3px;
-    width: 16px;
-    height: 16px;
+    margin: rem(3px);
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     
     &:before {
       position: absolute;
       content: '';
       display: block;
-      width: 6px;
-      height: 6px;
+      width: rem(6px);
+      height: rem(6px);
       background-color: #fff;
       border-radius: 50%;
       top: 50%;
@@ -147,8 +203,8 @@ display: flex;
         position: absolute;
         content: '';
         display: block;
-        width: 16px;
-        height: 16px;
+        width: rem(16px);
+        height: rem(16px);
         background-color: transparent;
         border-radius: 50%;
         border: 1px solid #fff;
@@ -158,13 +214,9 @@ display: flex;
         }
       }
     }
-  }
-
-
-  
-.scroll{
-    position: absolute;
-    left: 50%;
-    bottom: 40px;
 }
 
+.scroll{
+    left: 50%;
+    margin-bottom:rem(80px);
+}

@@ -1,9 +1,16 @@
 
+@import "./media.scss";
+@import "./mixins.scss";
 @import "./fonts.scss";
 @import "./normalize.css";
 @import "./layout.scss";
 
-// bloks
+
 @import "./blocks/hero.scss";
+@import "./blocks/hamburger-menu-link.scss";
 @import "./blocks/best.scss";
+@import "./blocks/team.scss";
+@import "./blocks/menu.scss";
 @import "./blocks/comments.scss";
+@import "./blocks/delivery.scss";
+@import "./blocks/contacts.scss";
